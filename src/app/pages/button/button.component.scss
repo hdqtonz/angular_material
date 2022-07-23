@@ -1,0 +1,15 @@
+.btn-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  .btn-card {
+    width: calc(50% - 20px);
+    margin: 0 10px 20px;
+    .btn-row {
+      display: flex;
+      button {
+        margin-right: 0.8rem;
+      }
+    }
+  }
+}
