@@ -1,0 +1,27 @@
+.container {
+  .wrapper {
+    .box {
+      width: 500px;
+      height: 200px;
+      padding: 50px;
+      font-size: 30px;
+    }
+  }
+  mat-card {
+    margin-top: 30px;
+    padding: 40px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+    text-align: center;
+    flex-direction: column;
+    mat-icon {
+      font-size: 23px;
+      width: 23px;
+      height: 23px;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+  }
+}

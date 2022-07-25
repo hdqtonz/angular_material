@@ -13,6 +13,37 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/button/button.module').then((m) => m.ButtonModule),
   },
+  {
+    path: 'button-toggle',
+    loadChildren: () =>
+      import('./pages/button-toggle/button-toggle.module').then(
+        (m) => m.ButtonToggleModule
+      ),
+  },
+  {
+    path: 'dynamic-color',
+    loadChildren: () =>
+      import('./pages/dynamic-colors/dynamic-colors.module').then(
+        (m) => m.DynamicColorsModule
+      ),
+  },
+  {
+    path: 'elevation',
+    loadChildren: () =>
+      import('./pages/elevation/elevation.module').then(
+        (m) => m.ElevationModule
+      ),
+  },
+  {
+    path: 'ripple',
+    loadChildren: () =>
+      import('./pages/ripple/ripple.module').then((m) => m.RippleModule),
+  },
+  {
+    path: 'menu',
+    loadChildren: () =>
+      import('./pages/menu/menu.module').then((m) => m.MenuModule),
+  },
 ];
 
 @NgModule({

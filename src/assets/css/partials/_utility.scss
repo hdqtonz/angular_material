@@ -1,57 +1,57 @@
 @use "@angular/material" as mat;
 
-/*
-    1.) Global Links, Utilities & Buttons
-    -------------------------------------*/
-* {
-  box-sizing: border-box;
-}
-a {
-  transition: 0.3s ease all;
-  text-decoration: none;
-}
-
-p {
-  opacity: 0.75;
-}
-.inactive {
-  opacity: 0.5;
-}
-.spacer {
-  flex: 1 1 auto;
-}
-
-.example-tooltip-red {
-  background: #b71c1c;
-}
-
-.mat-stroked-button:not([disabled]) {
-  border-color: inherit;
-}
-.container {
-  width: 100%;
-  max-width: 1270px;
-  margin: 0 auto;
-  padding: 15px 25px;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(-90deg);
-  }
-  100% {
-    transform: rotate(-90deg);
-  }
-}
-
 @mixin utility-mixin($theme) {
   $primary: mat.define-palette(mat.$deep-purple-palette, A400);
-  $accent: mat.define-palette(mat.$amber-palette);
+  $accent: mat.define-palette(mat.$amber-palette, A200, A100, A400);
   $warn: mat.define-palette(mat.$red-palette);
   $foreground: map-get($theme, foreground);
   $background: map-get($theme, background);
+
+  /*
+    1.) Global Links, Utilities & Buttons
+    -------------------------------------*/
+  * {
+    box-sizing: border-box;
+  }
+  a {
+    transition: 0.3s ease all;
+    text-decoration: none;
+  }
+
+  p {
+    opacity: 0.75;
+  }
+  .inactive {
+    opacity: 0.5;
+  }
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .example-tooltip-red {
+    background: #b71c1c;
+  }
+
+  .mat-stroked-button:not([disabled]) {
+    border-color: inherit;
+  }
+  .container {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 15px 25px;
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-90deg);
+    }
+    100% {
+      transform: rotate(-90deg);
+    }
+  }
 
   /*
     2.) Colors
@@ -131,6 +131,7 @@ p {
   .outline {
     border: 1px solid mat.get-color-from-palette($foreground, divider);
   }
+
   .outline-primary {
     border: 1px solid mat.get-color-from-palette($primary);
   }
@@ -146,11 +147,11 @@ p {
   }
 
   .mat-card.anup,
-  .anup {
-    @include mat.elevation(5, #e91e63, 0.8);
+  .hiten {
+    @include mat.elevation(5, #222121, 0.8);
     @include mat.elevation-transition();
     &:hover {
-      @include mat.elevation(24, #e91e63, 0.8);
+      @include mat.elevation(24, #222121, 0.8);
     }
   }
 

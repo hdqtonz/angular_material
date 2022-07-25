@@ -90,5 +90,65 @@
     </mat-card>
 
     <!-- FAB Button -->
+    <mat-card class="btn-card">
+      <h2>Flat Buttons</h2>
+      <div class="btn-row">
+        <button mat-fab color="primary"><mat-icon>delete</mat-icon></button>
+        <button mat-fab color="accent"><mat-icon>bookmark</mat-icon></button>
+        <button mat-fab color="warn"><mat-icon>home</mat-icon></button>
+        <button mat-fab disabled><mat-icon>favorite</mat-icon></button>
+      </div>
+    </mat-card>
+    <!-- Mini Flat Buttons -->
+    <mat-card class="btn-card">
+      <h2>Mini Flat Buttons</h2>
+      <div class="btn-row">
+        <button mat-mini-fab color="primary">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-mini-fab color="accent">
+          <mat-icon>bookmark</mat-icon>
+        </button>
+        <button mat-mini-fab color="warn"><mat-icon>home</mat-icon></button>
+        <button mat-mini-fab disabled><mat-icon>favorite</mat-icon></button>
+      </div>
+    </mat-card>
+
+    <!-- Loading Button -->
+    <mat-card class="btn-card">
+      <h2>Flat Buttons</h2>
+      <div class="btn-row">
+        <button mat-button>
+          Basic
+          <mat-icon
+            ><mat-spinner diameter="20" color="primary"></mat-spinner
+          ></mat-icon>
+        </button>
+        <button mat-raised-button color="primary">
+          Primary
+          <mat-icon
+            ><mat-spinner diameter="20" color="accent"></mat-spinner
+          ></mat-icon>
+        </button>
+        <button mat-stroked-button color="accent">
+          Accent
+          <mat-icon
+            ><mat-spinner diameter="20" color="primary"></mat-spinner
+          ></mat-icon>
+        </button>
+        <button mat-flat-button color="warn">
+          Warn
+          <mat-icon
+            ><mat-spinner diameter="20" color="accent"></mat-spinner
+          ></mat-icon>
+        </button>
+        <button mat-button disabled>
+          Disabled
+          <mat-icon
+            ><mat-spinner diameter="20" color="warn"></mat-spinner
+          ></mat-icon>
+        </button>
+      </div>
+    </mat-card>
   </div>
 </div>

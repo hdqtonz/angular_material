@@ -1,0 +1,86 @@
+<div class="container">
+  <h1>Button Toggle</h1>
+  <mat-divider></mat-divider>
+
+  <div class="content">
+    <div class="row">
+      <!-- Single Button toggle -->
+      <div class="col-6">
+        <h2>Ex. 1 Single Button Toggle</h2>
+        <mat-button-toggle
+          #myToggle
+          (change)="onSingleButtonToggle(myToggle)"
+          >{{ myToggle.checked ? "Active" : "Inactive" }}</mat-button-toggle
+        >
+        <p>{{ myToggle.checked }}</p>
+      </div>
+
+      <!-- Selecte toggle button-->
+      <div class="col-6">
+        <h2>Ex. 2</h2>
+        <mat-button-toggle-group
+          #MyGrp="matButtonToggleGroup"
+          (change)="onSeleteAlignMet($event)"
+        >
+          <mat-button-toggle value="left"
+            ><mat-icon>format_align_left</mat-icon></mat-button-toggle
+          >
+          <mat-button-toggle value="center"
+            ><mat-icon>format_align_center</mat-icon></mat-button-toggle
+          >
+          <mat-button-toggle value="right"
+            ><mat-icon>format_align_right</mat-icon></mat-button-toggle
+          >
+          <mat-button-toggle value="justify"
+            ><mat-icon>format_align_justify</mat-icon></mat-button-toggle
+          >
+        </mat-button-toggle-group>
+        <br />
+        <br />
+
+        <p [style.text-align]="MyGrp.value">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
+          quos architecto, porro ducimus rerum dicta. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Temporibus, nesciunt!
+        </p>
+      </div>
+
+      <!-- Multiple Selection Button Group -->
+      <div class="col-6">
+        <h2>Ex. 3 Multiple selection</h2>
+        <mat-button-toggle-group #MyMultiGroup="matButtonToggleGroup" multiple>
+          <mat-button-toggle value="Angular">Angular</mat-button-toggle>
+          <mat-button-toggle value="ReactJs">ReactJs</mat-button-toggle>
+          <mat-button-toggle value="NodeJs">NodeJs</mat-button-toggle>
+          <mat-button-toggle value="MongoDB">MongoDB</mat-button-toggle>
+        </mat-button-toggle-group>
+        <br />
+        {{ MyMultiGroup.value }}
+      </div>
+
+      <!-- Template Drivan Form -->
+      <div class="col-6">
+        <h2>Ex. 4 Tamplate Drivan Form</h2>
+
+        <mat-button-toggle-group [(ngModel)]="fontStyle">
+          <mat-button-toggle value="bold">Bold</mat-button-toggle>
+          <mat-button-toggle value="italic">Italic</mat-button-toggle>
+          <mat-button-toggle value="underline">Underline</mat-button-toggle>
+        </mat-button-toggle-group>
+        {{ fontStyle }}
+      </div>
+
+      <!-- Reactive Form -->
+      <div class="col-6">
+        <h2>Ex. 4 Reactive Form</h2>
+
+        <mat-button-toggle-group [formControl]="fontStyleControl" multiple>
+          <mat-button-toggle value="bold">Bold</mat-button-toggle>
+          <mat-button-toggle value="italic">Italic</mat-button-toggle>
+          <mat-button-toggle value="underline">Underline</mat-button-toggle>
+        </mat-button-toggle-group>
+        {{ fontStyleControl.value }}
+      </div>
+    </div>
+  </div>
+</div>
