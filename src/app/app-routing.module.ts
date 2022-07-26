@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './pages/main/main.component';
 
 const routes: Routes = [
   {
@@ -43,6 +42,16 @@ const routes: Routes = [
     path: 'menu',
     loadChildren: () =>
       import('./pages/menu/menu.module').then((m) => m.MenuModule),
+  },
+  {
+    path: 'badge',
+    loadChildren: () =>
+      import('./pages/badge/badge.module').then((m) => m.BadgeModule),
+  },
+  {
+    path: 'dialog',
+    loadChildren: () =>
+      import('./pages/dialog/dialog.module').then((m) => m.DialogModule),
   },
 ];
 

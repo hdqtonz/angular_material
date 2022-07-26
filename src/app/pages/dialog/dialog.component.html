@@ -1,0 +1,92 @@
+<div class="container">
+  <h2>Dialog</h2>
+  <mat-divider> </mat-divider>
+
+  <div class="content">
+    <div class="row">
+      <div class="col-6">
+        <mat-card class="bg-app mat-elevation-z0">
+          <h2>Example #1</h2>
+          <button mat-stroked-button (click)="openDialog()" color="primary">
+            Open Dialog
+          </button>
+        </mat-card>
+      </div>
+
+      <!-- Dialog with header, scrollable content and actions -->
+      <div class="col-6">
+        <mat-card class="bg-app mat-elevation-z0">
+          <h2>
+            Example #2 :Dialog with header, scrollable content and actions
+          </h2>
+          <button mat-stroked-button (click)="openDialog2()" color="primary">
+            Open Dialog
+          </button>
+        </mat-card>
+      </div>
+      <!-- End -->
+
+      <!-- Dialog with Data -->
+      <div class="col-6">
+        <mat-card class="bg-app mat-elevation-z0">
+          <h2>Example #2 :Dialog with Data</h2>
+          <ol class="pr-5">
+            <li>
+              <mat-form-field>
+                <mat-label>What's your name?</mat-label>
+                <input matInput [(ngModel)]="name" />
+              </mat-form-field>
+            </li>
+            <li>
+              <button
+                mat-stroked-button
+                color="warn"
+                (click)="openDataDialog()"
+              >
+                Open Dialog
+              </button>
+            </li>
+            <li *ngIf="animal">
+              You chose: <i>{{ animal }}</i>
+            </li>
+          </ol>
+        </mat-card>
+      </div>
+      <!-- End -->
+
+      <!-- Global Prompt Dialog -->
+      <div class="col-6">
+        <mat-card class="bg-app mat-elevation-z0">
+          <h2>Example #2 :Global Prompt Dialog</h2>
+          <ol class="pr-5">
+            <li>
+              <mat-form-field>
+                <mat-label>Prompt Title</mat-label>
+                <input matInput [(ngModel)]="promptTitle" />
+              </mat-form-field>
+            </li>
+            <li>
+              <mat-form-field>
+                <mat-label>Prompt Text</mat-label>
+                <input matInput [(ngModel)]="promptText" />
+              </mat-form-field>
+            </li>
+            <li>
+              <button
+                mat-stroked-button
+                (click)="openPromptDialon()"
+                color="warn"
+              >
+                Open Dialog
+              </button>
+            </li>
+            <li *ngIf="promptResult">
+              You chose: <i>{{ promptResult }}</i>
+            </li>
+          </ol>
+        </mat-card>
+      </div>
+      <!-- End -->
+    </div>
+  </div>
+</div>

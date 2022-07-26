@@ -1,0 +1,59 @@
+<div class="container">
+  <h2>Badges</h2>
+  <mat-divider></mat-divider>
+  <div class="content">
+    <div class="row">
+      <!-- Example One -->
+      <div class="col-6">
+        <mat-card class="bg-app mat-elevation-z0">
+          <h2>Example #1</h2>
+          <button matBadge="4" mat-stroked-button color="primary">
+            Open Dialog
+          </button>
+          <p>
+            <span matBadge="4" matBadgeOverlap="false"
+              >This is example text</span
+            >
+          </p>
+          <p>
+            <span matBadgeSize="large" matBadge="4" matBadgeOverlap="false"
+              >This is example text</span
+            >
+          </p>
+          <p>
+            <span
+              matBadgeSize="small"
+              matBadgeColor="warn"
+              matBadge="4"
+              matBadgeOverlap="false"
+              >This is example text</span
+            >
+          </p>
+          <p>
+            <span matBadgeDisabled="true" matBadge="4" matBadgeOverlap="false"
+              >This is example text</span
+            >
+          </p>
+          <p>
+            <span matBadgePosition="below" matBadge="4" matBadgeOverlap="false"
+              >This is example text</span
+            >
+          </p>
+        </mat-card>
+      </div>
+      <!-- Example Two -->
+      <div class="col-6">
+        <mat-card class="bg-app mat-elevation-z0">
+          <h2>Example #2 Add Remove cart item</h2>
+          <button (click)="onAdd()" mat-mini-fab color="primary">
+            <mat-icon>add</mat-icon>
+          </button>
+          <span class="mx-2">{{ count }}</span>
+          <button (click)="onRemove()" mat-mini-fab color="primary">
+            <mat-icon>remove</mat-icon>
+          </button>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
