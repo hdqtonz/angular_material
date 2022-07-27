@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DesignUtilityService } from 'src/app/appServices/design-utility.service';
-import { PromptComponent } from 'src/app/includes/utilities/popups/prompt/prompt.component';
 import { DialogOneComponent } from './dialog-one/dialog-one.component';
 import { DialogThreeComponent } from './dialog-three/dialog-three.component';
 import { DialogTwoComponent } from './dialog-two/dialog-two.component';

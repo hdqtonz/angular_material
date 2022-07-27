@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { DesignUtilityService } from 'src/app/appServices/design-utility.service';
-import { PromptComponent } from '../utilities/popups/prompt/prompt.component';
 
 @Component({
   selector: 'app-header',
@@ -29,7 +28,6 @@ export class HeaderComponent implements OnInit {
       text: 'Do you want to logout?',
     };
     this.desingUtilityService.OpenPropt(data).subscribe((res) => {
-      console.log(res);
       if (res) {
         this.route.navigate(['/']);
       }

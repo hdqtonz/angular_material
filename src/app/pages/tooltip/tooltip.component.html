@@ -1,0 +1,114 @@
+<div class="container">
+  <h2>Tooltip</h2>
+  <mat-divider></mat-divider>
+
+  <div class="content">
+    <div class="row">
+      <div class="col-6">
+        <mat-card class="bg-app mat-elevation-z0">
+          <h2>Example #1</h2>
+          <!-- Default Tooltip -->
+          <button
+            mat-flat-button
+            color="primary"
+            matTooltip="Welcome to shine and qtonz"
+          >
+            Action
+          </button>
+          <!-- Above Tooltip -->
+          <button
+            class="ml-2"
+            mat-flat-button
+            color="primary"
+            matTooltipPosition="above"
+            matTooltip="Welcome to shine and qtonz"
+          >
+            above
+          </button>
+          <!-- Left Tooltip -->
+          <button
+            class="ml-2"
+            mat-flat-button
+            color="primary"
+            matTooltipPosition="left"
+            matTooltip="Welcome to shine and qtonz"
+          >
+            left
+          </button>
+          <!-- Right Tooltip -->
+          <button
+            class="ml-2"
+            mat-flat-button
+            color="primary"
+            matTooltipPosition="right"
+            matTooltip="Welcome to shine and qtonz"
+          >
+            right
+          </button>
+          <!-- Before Tooltip -->
+          <button
+            class="ml-2"
+            mat-flat-button
+            color="primary"
+            matTooltipPosition="before"
+            matTooltip="Welcome to shine and qtonz"
+          >
+            before
+          </button>
+          <!-- After Tooltip -->
+          <button
+            class="ml-2"
+            mat-flat-button
+            color="primary"
+            matTooltipPosition="after"
+            matTooltip="Welcome to shine and qtonz"
+          >
+            after
+          </button>
+          <!-- show/hide delay -->
+          <button
+            class="ml-2"
+            mat-flat-button
+            color="primary"
+            matTooltipShowDelay="2000"
+            matTooltipHideDelay="1000"
+            matTooltip="Welcome to shine and qtonz"
+          >
+            Delay
+          </button>
+          <!-- Manual Toop tip buttons -->
+          <div class="mt-4">
+            <button mat-stroked-button color="accent" (click)="tooltip.show()">
+              show
+            </button>
+            <button
+              class="mx-3"
+              mat-stroked-button
+              color="warn"
+              (click)="tooltip.hide()"
+            >
+              hide
+            </button>
+            <button mat-flat-button color="primary" (click)="tooltip.toggle()">
+              toggle
+            </button>
+          </div>
+        </mat-card>
+      </div>
+      <div class="col-6">
+        <mat-card class="bg-app mat-elevation-z0">
+          <h2>Example #2</h2>
+          <button
+            mat-icon-button
+            color="warn"
+            #tooltip="matTooltip"
+            matTooltip="Manual Tooltip"
+            matTooltipPosition="after"
+          >
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

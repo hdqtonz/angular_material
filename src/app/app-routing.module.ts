@@ -53,6 +53,16 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/dialog/dialog.module').then((m) => m.DialogModule),
   },
+  {
+    path: 'cards',
+    loadChildren: () =>
+      import('./pages/card/card.module').then((m) => m.CardModule),
+  },
+  {
+    path: 'tooltip',
+    loadChildren: () =>
+      import('./pages/tooltip/tooltip.module').then((m) => m.TooltipModule),
+  },
 ];
 
 @NgModule({
