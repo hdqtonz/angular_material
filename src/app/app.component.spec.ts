@@ -22,14 +22,13 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('angular_material');
   });
 
-  // it('should render title', () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   fixture.detectChanges();
+  xit('should render title', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
 
-  //   const compiled = fixture.nativeElement as HTMLElement;
-  //   console.log(compiled);
-  //   expect(compiled.querySelector('.content span')?.textContent).toContain(
-  //     'angular_material app is running!'
-  //   );
-  // });
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.content span')?.textContent).toContain(
+      'angular_material app is running!'
+    );
+  });
 });
